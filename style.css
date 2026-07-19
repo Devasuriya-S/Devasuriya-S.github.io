@@ -411,6 +411,295 @@ footer {
     letter-spacing: 0.12em;
 }
 
+
+/* ==================================================
+   INNER PAGE – SHARED STYLES
+   ================================================== */
+
+.page-introduction {
+    position: relative;
+    padding: 130px 0 110px;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-number {
+    position: absolute;
+    top: 55px;
+    right: 0;
+
+    color: #5f7079;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+    letter-spacing: 0.17em;
+}
+
+.page-title {
+    max-width: 1050px;
+    font-size: clamp(55px, 7vw, 100px);
+}
+
+.page-summary {
+    max-width: 720px;
+    margin: 45px 0 0;
+    color: var(--muted);
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.content-label {
+    margin: 0 0 20px;
+
+    color: var(--copper-light);
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+/* About section */
+
+.about-section {
+    padding: 120px 0;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 120px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.about-section h2,
+.engineering-approach h2,
+.page-action h2 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 4vw, 60px);
+    font-weight: 400;
+    line-height: 1.12;
+}
+
+.about-content {
+    max-width: 760px;
+}
+
+.about-content p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-content .large-paragraph {
+    margin-top: 0;
+    color: var(--text);
+    font-size: 25px;
+    line-height: 1.55;
+}
+
+/* Information cards */
+
+.information-grid {
+    padding: 100px 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.information-card {
+    position: relative;
+    min-height: 360px;
+    padding: 44px;
+
+    background: rgba(18, 29, 37, 0.45);
+    border: 1px solid var(--border);
+}
+
+.information-card + .information-card {
+    border-left: 0;
+}
+
+.card-number {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    color: var(--copper-dark);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 45px;
+}
+
+.information-card h3 {
+    max-width: 320px;
+    margin: 65px 0 25px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.information-card p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.information-card .card-detail {
+    margin: 5px 0;
+    color: #697881;
+    font-size: 14px;
+}
+
+/* Engineering approach */
+
+.engineering-approach {
+    padding: 120px 0;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 120px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.approach-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.approach-list li {
+    padding: 35px 0;
+
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 25px;
+
+    border-top: 1px solid var(--border);
+}
+
+.approach-list li:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+.approach-list > li > span {
+    color: var(--copper);
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+}
+
+.approach-list h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+}
+
+.approach-list p {
+    max-width: 620px;
+    margin: 0;
+
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* Bottom page action */
+
+.page-action {
+    padding: 120px 0;
+}
+
+.page-action h2 {
+    max-width: 900px;
+}
+
+/* Responsive inner pages */
+
+@media (max-width: 1000px) {
+    .about-section,
+    .engineering-approach {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .information-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .information-card + .information-card {
+        border-top: 0;
+        border-left: 1px solid var(--border);
+    }
+}
+
+@media (max-width: 760px) {
+    .page-introduction {
+        padding: 110px 0 80px;
+    }
+
+    .page-number {
+        top: 45px;
+        left: 0;
+        right: auto;
+    }
+
+    .page-summary {
+        font-size: 17px;
+    }
+
+    .about-section,
+    .engineering-approach {
+        padding: 80px 0;
+    }
+
+    .about-content .large-paragraph {
+        font-size: 21px;
+    }
+
+    .information-grid {
+        padding: 70px 0;
+    }
+
+    .information-card {
+        min-height: 310px;
+        padding: 32px 25px;
+    }
+
+    .page-action {
+        padding: 80px 0;
+    }
+}
+
+
+
 /* Tablet */
 
 @media (max-width: 1100px) {
