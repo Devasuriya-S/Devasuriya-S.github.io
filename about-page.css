@@ -742,7 +742,13 @@ html {
         flex-direction: column;
     }
 }
-element.style {
-    width: 484px;
-    height: 360px;
+.project-image-placeholder {
+    overflow: hidden;
+}
+
+.project-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
