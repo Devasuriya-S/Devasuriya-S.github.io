@@ -13,15 +13,31 @@
 
     <meta
         name="description"
-        content="Learn more about Devasuriya, a final-year electrical engineering student focused on industrial electrical design and power systems."
+        content="About Devasuriya, a final-year electrical and electronic engineering student based in Perth."
     >
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Existing website CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- About-page CSS -->
+    <link rel="stylesheet" href="about-page.css">
 </head>
 
-<body>
-
-    <!-- Header -->
+<body class="about-page">
 
     <header class="site-header">
 
@@ -29,7 +45,16 @@
             DEVASURIYA
         </a>
 
-        <nav aria-label="Main navigation">
+        <button
+            class="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+        >
+            Menu
+        </button>
+
+        <nav id="main-navigation" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a class="active" href="about.html">About</a>
             <a href="skills.html">Skills</a>
@@ -40,225 +65,331 @@
 
     </header>
 
-    <!-- Main content -->
+    <main class="about-main">
 
-    <main>
+        <!-- About introduction -->
 
-        <section class="page-introduction">
+        <section class="about-hero bordered-section">
 
-            <div class="page-number">
-                02 / ABOUT
+            <span class="border-accent" aria-hidden="true"></span>
+
+            <div class="hero-copy">
+
+                <p class="technical-label">
+                    About / 02
+                </p>
+
+                <h1>
+                    Engineering is how I make sense of complex systems.
+                </h1>
+
+                <p class="hero-introduction">
+                    I am a final-year Master of Professional Engineering student
+                    at UWA, developing practical capability in industrial
+                    electrical design, power systems and renewable energy.
+                </p>
+
             </div>
 
-            <p class="section-label">
-                Professional Profile
-            </p>
+            <div class="signal-line" aria-hidden="true">
 
-            <h1 class="page-title">
-                Developing the judgement behind the design.
-            </h1>
+                <span class="signal-dot signal-start"></span>
+                <span class="signal-part part-one"></span>
+                <span class="signal-part part-two"></span>
+                <span class="signal-part part-three"></span>
+                <span class="signal-part part-four"></span>
+                <span class="signal-part part-five"></span>
+                <span class="signal-dot signal-end"></span>
 
-            <p class="page-summary">
-                I am a final-year Master of Professional Engineering student
-                based in Perth, developing my career in industrial electrical
-                design, power systems and renewable energy.
-            </p>
+            </div>
 
         </section>
 
-        <section class="about-section">
+        <!-- Technical direction -->
 
-            <div class="about-heading">
+        <section class="direction-section bordered-section">
 
-                <p class="content-label">
+            <span class="border-accent" aria-hidden="true"></span>
+
+            <div class="section-heading">
+
+                <p class="technical-label">
                     My Direction
                 </p>
 
                 <h2>
-                    From engineering fundamentals to practical project work.
+                    What I am building toward
                 </h2>
 
             </div>
 
-            <div class="about-content">
+            <div class="direction-content">
 
-                <p class="large-paragraph">
-                    My objective is to develop the technical foundation and
-                    engineering judgement expected of a graduate electrical
-                    engineer.
+                <p class="section-lead">
+                    I want to contribute to electrical systems that are safe,
+                    reliable and practical to build. My focus is on developing
+                    sound engineering judgement through technical study,
+                    industry exposure and project work.
                 </p>
 
-                <p>
-                    I am particularly interested in industrial power
-                    distribution, electrical system design, power-system
-                    studies, equipment selection, cable engineering and
-                    renewable-energy integration.
-                </p>
+                <div class="focus-list">
 
-                <p>
-                    Through academic work, practical industry exposure and
-                    self-directed engineering projects, I am learning how
-                    electrical designs progress from initial requirements and
-                    concept development through detailed design, procurement,
-                    construction and commissioning.
-                </p>
+                    <article class="focus-item">
 
-                <p>
-                    I focus on understanding why each engineering document,
-                    calculation and design decision is required—not only how to
-                    produce the final deliverable.
-                </p>
+                        <span class="focus-number">01</span>
+
+                        <h3>
+                            Industrial electrical design
+                        </h3>
+
+                        <p>
+                            Power distribution, electrical drawings, cable
+                            engineering and design documentation.
+                        </p>
+
+                    </article>
+
+                    <article class="focus-item">
+
+                        <span class="focus-number">02</span>
+
+                        <h3>
+                            Power-system studies
+                        </h3>
+
+                        <p>
+                            Building accurate models, checking inputs and
+                            interpreting load-flow and fault-study results.
+                        </p>
+
+                    </article>
+
+                    <article class="focus-item">
+
+                        <span class="focus-number">03</span>
+
+                        <h3>
+                            Renewable energy
+                        </h3>
+
+                        <p>
+                            Understanding how renewable technologies integrate
+                            with reliable electrical infrastructure.
+                        </p>
+
+                    </article>
+
+                </div>
 
             </div>
 
         </section>
 
-        <section class="information-grid">
+        <!-- Project work -->
 
-            <article class="information-card">
+        <section class="projects-section bordered-section">
 
-                <span class="card-number">01</span>
+            <span class="border-accent" aria-hidden="true"></span>
 
-                <p class="content-label">
-                    Education
-                </p>
+            <div class="projects-heading">
 
-                <h3>
-                    Master of Professional Engineering
-                </h3>
-
-                <p>
-                    Electrical and Electronic Engineering
-                </p>
-
-                <p class="card-detail">
-                    The University of Western Australia
-                </p>
-
-                <p class="card-detail">
-                    Final year
-                </p>
-
-            </article>
-
-            <article class="information-card">
-
-                <span class="card-number">02</span>
-
-                <p class="content-label">
-                    Technical Focus
-                </p>
-
-                <h3>
-                    Industrial Electrical Design
-                </h3>
-
-                <p>
-                    Power-system modelling, single-line diagrams, cable
-                    engineering and technical documentation.
-                </p>
-
-            </article>
-
-            <article class="information-card">
-
-                <span class="card-number">03</span>
-
-                <p class="content-label">
-                    Career Direction
-                </p>
-
-                <h3>
-                    Graduate Electrical Engineer
-                </h3>
-
-                <p>
-                    Seeking opportunities in consulting, utilities, mining,
-                    infrastructure and renewable energy.
-                </p>
-
-            </article>
-
-        </section>
-
-        <section class="engineering-approach">
-
-            <div>
-
-                <p class="content-label">
-                    Engineering Approach
+                <p class="technical-label">
+                    Learning Through
                 </p>
 
                 <h2>
-                    How I approach technical work
+                    Real project work
                 </h2>
 
             </div>
 
-            <ol class="approach-list">
+            <div class="project-list">
 
-                <li>
-                    <span>01</span>
+                <article class="project-entry">
 
-                    <div>
-                        <h3>Define the requirement</h3>
+                    <div class="project-copy">
 
-                        <p>
-                            Understand the scope, system boundaries, design
-                            inputs, constraints and applicable criteria.
-                        </p>
+                        <span class="project-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Industrial Power Distribution Design
+                            </h3>
+
+                            <p>
+                                A self-directed project focused on the complete
+                                electrical design workflow, including drawings,
+                                calculations, studies, procurement documentation
+                                and commissioning requirements.
+                            </p>
+
+                            <a href="projects.html#industrial-power">
+                                View project
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
                     </div>
-                </li>
 
-                <li>
-                    <span>02</span>
-
-                    <div>
-                        <h3>Develop and assess</h3>
-
-                        <p>
-                            Create the design, perform calculations and studies,
-                            and compare suitable technical options.
-                        </p>
+                    <div class="project-image-placeholder">
+                        <span>Project image / to be added</span>
                     </div>
-                </li>
 
-                <li>
-                    <span>03</span>
+                </article>
 
-                    <div>
-                        <h3>Verify and communicate</h3>
+                <article class="project-entry">
 
-                        <p>
-                            Check assumptions, interpret results and present the
-                            design clearly through drawings and documentation.
-                        </p>
+                    <div class="project-copy">
+
+                        <span class="project-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Electrical Furnace Project
+                            </h3>
+
+                            <p>
+                                Electrical and control-system design work
+                                involving system architecture, protection,
+                                equipment selection and operational
+                                considerations.
+                            </p>
+
+                            <a href="projects.html#furnace">
+                                View project
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
                     </div>
-                </li>
 
-            </ol>
+                    <div class="project-image-placeholder">
+                        <span>Project image / to be added</span>
+                    </div>
+
+                </article>
+
+                <article class="project-entry">
+
+                    <div class="project-copy">
+
+                        <span class="project-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Green Tech Cruise
+                            </h3>
+
+                            <p>
+                                A sustainable engineering project exploring
+                                energy efficiency, renewable integration and
+                                the electrical requirements of a lower-emission
+                                cruise concept.
+                            </p>
+
+                            <a href="projects.html#green-tech-cruise">
+                                View project
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-image-placeholder">
+                        <span>Project image / to be added</span>
+                    </div>
+
+                </article>
+
+            </div>
 
         </section>
 
-        <section class="page-action">
+        <!-- Working approach -->
 
-            <p class="content-label">
-                Continue Exploring
-            </p>
+        <section class="working-section bordered-section">
 
-            <h2>
-                Review my technical capabilities and project work.
-            </h2>
+            <span class="border-accent" aria-hidden="true"></span>
 
-            <div class="hero-buttons">
+            <div class="section-heading">
 
-                <a class="primary-button" href="skills.html">
-                    <span>View Skills</span>
+                <p class="technical-label">
+                    How I Work
+                </p>
+
+                <h2>
+                    My approach
+                </h2>
+
+            </div>
+
+            <div class="working-points">
+
+                <p>
+                    <span>01</span>
+                    I begin by understanding the requirement, boundaries and
+                    assumptions.
+                </p>
+
+                <p>
+                    <span>02</span>
+                    I check the inputs before accepting calculations or
+                    software outputs.
+                </p>
+
+                <p>
+                    <span>03</span>
+                    I keep drawings and documentation clear for the next
+                    person using them.
+                </p>
+
+                <p>
+                    <span>04</span>
+                    I record uncertainties and identify what still requires
+                    verification.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Next page -->
+
+        <section class="about-next bordered-section">
+
+            <div>
+
+                <p class="technical-label">
+                    Continue Exploring
+                </p>
+
+                <h2>
+                    See the work behind the learning.
+                </h2>
+
+            </div>
+
+            <div class="next-links">
+
+                <a href="projects.html">
+                    View projects
                     <span aria-hidden="true">→</span>
                 </a>
 
-                <a class="secondary-button" href="projects.html">
-                    <span>View Projects</span>
+                <a href="skills.html">
+                    Explore skills
                     <span aria-hidden="true">→</span>
                 </a>
 
@@ -267,8 +398,6 @@
         </section>
 
     </main>
-
-    <!-- Footer -->
 
     <footer>
 
@@ -282,6 +411,22 @@
 
     </footer>
 
-</body>
+    <script>
+        const menuButton = document.querySelector(".menu-button");
+        const navigation = document.querySelector("#main-navigation");
 
+        menuButton.addEventListener("click", () => {
+            const isOpen =
+                menuButton.getAttribute("aria-expanded") === "true";
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                String(!isOpen)
+            );
+
+            navigation.classList.toggle("open");
+        });
+    </script>
+
+</body>
 </html>
