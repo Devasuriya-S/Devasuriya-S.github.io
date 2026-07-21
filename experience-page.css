@@ -1,0 +1,564 @@
+:root {
+    --experience-background: #071521;
+    --experience-text: #e8e5df;
+    --experience-muted: #a8b0b5;
+    --experience-accent: #7896a8;
+    --experience-action: #c86c3c;
+    --experience-border: rgba(120, 150, 168, 0.2);
+    --experience-border-light: rgba(120, 150, 168, 0.11);
+    --experience-heading-font: "Space Grotesk", Arial, sans-serif;
+    --experience-body-font: "Inter", Arial, sans-serif;
+    --experience-technical-font: "IBM Plex Mono", Consolas, monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.experience-page {
+    margin: 0;
+    background: var(--experience-background);
+    color: var(--experience-text);
+    font-family: var(--experience-body-font);
+}
+
+.experience-page .site-header,
+.experience-main,
+.experience-page footer {
+    width: min(1180px, calc(100% - 80px));
+    margin-inline: auto;
+}
+
+/* Header */
+
+.experience-page .site-header {
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    border-bottom: 0;
+}
+
+.experience-page .logo {
+    color: var(--experience-text);
+    font-family: var(--experience-technical-font);
+    font-size: 17px;
+    letter-spacing: 0.24em;
+    text-decoration: none;
+}
+
+.experience-page nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.experience-page nav a {
+    position: relative;
+    padding: 8px 0;
+    color: var(--experience-muted);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.experience-page nav a:hover,
+.experience-page nav a.active {
+    color: var(--experience-text);
+}
+
+.experience-page nav a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--experience-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 180ms ease;
+}
+
+.experience-page nav a:hover::after,
+.experience-page nav a.active::after {
+    transform: scaleX(1);
+}
+
+.experience-menu-button {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--experience-text);
+    font: 500 12px var(--experience-technical-font);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Type and borders */
+
+.experience-page h1,
+.experience-page h2,
+.experience-page h3 {
+    font-family: var(--experience-heading-font);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+}
+
+.experience-page p {
+    color: var(--experience-muted);
+    line-height: 1.75;
+}
+
+.experience-label,
+.role-meta,
+.role-status,
+.role-tools,
+.developed-grid span,
+.experience-next-links a {
+    font-family: var(--experience-technical-font);
+}
+
+.experience-label {
+    margin: 0 0 26px;
+    color: var(--experience-accent) !important;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.experience-border-section {
+    position: relative;
+}
+
+.experience-border-section::before,
+.experience-border-section::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: var(--experience-border);
+}
+
+.experience-border-section::before {
+    top: 0;
+    left: 0;
+    width: 24px;
+}
+
+.experience-border-section::after {
+    right: 0;
+    bottom: 0;
+    width: 24px;
+}
+
+/* Hero */
+
+.experience-hero {
+    min-height: 620px;
+    padding: 100px 0 110px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 100px;
+}
+
+.experience-hero h1 {
+    max-width: 790px;
+    margin: 0;
+    font-size: clamp(58px, 6vw, 88px);
+    line-height: 1.04;
+}
+
+.hero-summary {
+    max-width: 650px;
+    margin: 42px 0 0;
+    font-size: 16px;
+}
+
+.experience-motif {
+    position: relative;
+    width: 260px;
+    height: 310px;
+    justify-self: end;
+}
+
+.motif-axis {
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    left: 74px;
+    width: 1px;
+    background: var(--experience-accent);
+    opacity: 0.65;
+}
+
+.motif-node {
+    position: absolute;
+    left: 68px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid var(--experience-accent);
+    border-radius: 50%;
+    background: var(--experience-background);
+}
+
+.node-one { top: 42px; }
+.node-two { top: 146px; }
+.node-three { top: 250px; }
+
+.motif-label {
+    position: absolute;
+    left: 106px;
+    color: var(--experience-accent);
+    font: 11px var(--experience-technical-font);
+    letter-spacing: 0.12em;
+}
+
+.label-one { top: 41px; }
+.label-two { top: 145px; }
+.label-three { top: 249px; }
+
+/* Roles */
+
+.experience-list {
+    margin-top: 130px;
+    padding: 64px 0 30px;
+}
+
+.role {
+    padding: 72px 0;
+    display: grid;
+    grid-template-columns: 0.7fr 1.05fr 1.45fr;
+    gap: 58px;
+    border-top: 1px solid var(--experience-border-light);
+}
+
+.role:first-child {
+    border-top: 0;
+}
+
+.role-meta {
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.role-meta p {
+    margin: 10px 0 0;
+    font-size: inherit;
+    line-height: 1.5;
+}
+
+.role-number {
+    display: block;
+    margin-bottom: 34px;
+    color: var(--experience-accent);
+    font-size: 30px;
+    letter-spacing: -0.04em;
+}
+
+.role-summary h2 {
+    margin: 0;
+    font-size: clamp(29px, 3vw, 42px);
+    line-height: 1.12;
+}
+
+.role-summary h3 {
+    margin: 18px 0 0;
+    color: var(--experience-accent);
+    font-size: 18px;
+    letter-spacing: -0.015em;
+}
+
+.role-status {
+    width: fit-content;
+    margin: 0 0 22px;
+    padding: 6px 10px;
+    border: 1px solid var(--experience-border);
+    color: var(--experience-accent) !important;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.role-details > p {
+    margin: 0 0 30px;
+    font-size: 14px;
+}
+
+.role-details ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.role-details li {
+    position: relative;
+    margin-top: 13px;
+    padding-left: 22px;
+    color: var(--experience-muted);
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.role-details li::before {
+    content: "";
+    position: absolute;
+    top: 0.76em;
+    left: 0;
+    width: 8px;
+    height: 1px;
+    background: var(--experience-accent);
+}
+
+.role-tools {
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.role-tools span {
+    padding: 7px 10px;
+    border: 1px solid var(--experience-border);
+    color: var(--experience-accent);
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* Areas developed */
+
+.developed-section {
+    margin-top: 140px;
+    padding: 70px 0 88px;
+    display: grid;
+    grid-template-columns: 0.62fr 1.38fr;
+    gap: 90px;
+}
+
+.section-heading h2,
+.experience-next h2 {
+    margin: 0;
+    font-size: clamp(40px, 4.5vw, 62px);
+    line-height: 1.06;
+}
+
+.developed-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.developed-grid p {
+    min-height: 150px;
+    margin: 0;
+    padding: 28px 30px;
+    border-top: 1px solid var(--experience-border-light);
+    font-size: 13px;
+}
+
+.developed-grid p:nth-child(odd) {
+    padding-left: 0;
+}
+
+.developed-grid span {
+    display: block;
+    margin-bottom: 22px;
+    color: var(--experience-accent);
+    font-size: 10px;
+}
+
+/* Bottom actions */
+
+.experience-next {
+    margin-top: 120px;
+    padding: 80px 0 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    gap: 80px;
+}
+
+.experience-next-links {
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 64px;
+}
+
+.experience-next-links a {
+    color: var(--experience-action);
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.experience-next-links a span {
+    margin-left: 14px;
+    transition: margin-left 180ms ease;
+}
+
+.experience-next-links a:hover span {
+    margin-left: 22px;
+}
+
+/* Footer */
+
+.experience-page footer {
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    color: rgba(168, 176, 181, 0.52);
+    font: 10px var(--experience-technical-font);
+    letter-spacing: 0.1em;
+}
+
+/* Tablet */
+
+@media (max-width: 980px) {
+    .experience-page .site-header,
+    .experience-main,
+    .experience-page footer {
+        width: min(760px, calc(100% - 48px));
+    }
+
+    .experience-page nav {
+        gap: 20px;
+    }
+
+    .experience-hero,
+    .developed-section,
+    .experience-next {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-hero {
+        min-height: auto;
+    }
+
+    .experience-motif {
+        display: none;
+    }
+
+    .role {
+        grid-template-columns: 0.52fr 1fr;
+    }
+
+    .role-details {
+        grid-column: 2;
+    }
+
+    .developed-section {
+        gap: 48px;
+    }
+
+    .experience-next-links {
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 720px) {
+    .experience-page .site-header,
+    .experience-main,
+    .experience-page footer {
+        width: calc(100% - 36px);
+    }
+
+    .experience-page .site-header {
+        position: relative;
+        min-height: 78px;
+    }
+
+    .experience-menu-button {
+        display: block;
+        cursor: pointer;
+    }
+
+    .experience-page nav {
+        position: absolute;
+        z-index: 10;
+        top: 68px;
+        right: 0;
+        left: 0;
+        display: none;
+        padding: 20px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        background: #0a1925;
+        border: 1px solid var(--experience-border);
+    }
+
+    .experience-page nav.open {
+        display: flex;
+    }
+
+    .experience-hero {
+        padding: 65px 0 75px;
+    }
+
+    .experience-hero h1 {
+        font-size: clamp(43px, 13vw, 62px);
+    }
+
+    .hero-summary {
+        margin-top: 32px;
+        font-size: 15px;
+    }
+
+    .experience-list,
+    .developed-section,
+    .experience-next {
+        margin-top: 90px;
+        padding: 54px 0 65px;
+    }
+
+    .role {
+        padding: 52px 0;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .role-details {
+        grid-column: auto;
+    }
+
+    .role-number {
+        margin-bottom: 20px;
+    }
+
+    .role-summary h2 {
+        font-size: 31px;
+    }
+
+    .developed-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .developed-grid p,
+    .developed-grid p:nth-child(odd) {
+        min-height: auto;
+        padding: 26px 0;
+    }
+
+    .experience-next {
+        gap: 48px;
+    }
+
+    .experience-next-links {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .experience-page footer {
+        padding: 35px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
