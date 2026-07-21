@@ -742,3 +742,7 @@ html {
         flex-direction: column;
     }
 }
+element.style {
+    width: 484px;
+    height: 360px;
+}
