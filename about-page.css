@@ -226,8 +226,7 @@ html {
 .hero-introduction {
     max-width: 660px;
     margin: 42px 0 0;
-
-    font-size: 17px;
+    font-size: 20px;
 }
 
 /* Abstract signal line */
@@ -334,8 +333,7 @@ html {
 .section-lead {
     max-width: 720px;
     margin: 0 0 72px;
-
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .focus-list {
@@ -357,19 +355,18 @@ html {
 
 .focus-number {
     color: var(--about-accent);
-    font-size: 11px;
+    font-size: 20px;
 }
 
 .focus-item h3 {
-    margin: 42px 0 16px;
-
+    margin: 24px 0 16px;
     font-size: 24px;
     line-height: 1.16;
 }
 
 .focus-item p {
     margin: 0;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 /* Projects */
@@ -421,8 +418,7 @@ html {
 .project-copy p {
     max-width: 580px;
     margin: 0 0 20px;
-
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .project-copy a,
