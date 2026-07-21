@@ -48,7 +48,7 @@ html {
 .projects-page .logo {
     color: var(--projects-text);
     font-family: var(--projects-technical-font);
-    font-size: 17px;
+    font-size: 22px;
     letter-spacing: 0.24em;
     text-decoration: none;
 }
