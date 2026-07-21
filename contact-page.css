@@ -43,8 +43,8 @@
 .contact-page .logo {
     color: var(--contact-text);
     font-family: var(--contact-technical-font);
-    font-size: 17px;
-    letter-spacing: 0.18em;
+    font-size: 22px;
+    letter-spacing: 0.14em;
     text-decoration: none;
 }
 
