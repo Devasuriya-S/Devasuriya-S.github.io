@@ -4,20 +4,24 @@
    ================================================== */
 
 :root {
-    --background: #0f171e;
-    --background-deep: #0b1217;
-    --panel: #121d25;
-    --panel-light: #17242d;
+    --background: #071521;
+    --background-deep: #05101a;
+    --panel: #0a1925;
+    --panel-light: #0d1d29;
 
-    --text: #dedbd5;
-    --muted: #8d999f;
+    --text: #e8e5df;
+    --muted: #a8b0b5;
 
-    --copper: #b97950;
-    --copper-light: #cc9169;
-    --copper-dark: #80543b;
+    --copper: #c86c3c;
+    --copper-light: #d47b4a;
+    --copper-dark: #78452f;
 
-    --border: #293740;
-    --grid: rgba(118, 140, 151, 0.07);
+    --border: rgba(182, 195, 201, 0.16);
+    --grid: rgba(182, 195, 201, 0.045);
+
+    --heading-font: "Space Grotesk", Arial, sans-serif;
+    --body-font: "Inter", Arial, sans-serif;
+    --technical-font: "IBM Plex Mono", Consolas, monospace;
 }
 
 * {
@@ -32,21 +36,11 @@ body {
     margin: 0;
     min-height: 100vh;
 
-    background:
-        radial-gradient(
-            circle at 15% 40%,
-            rgba(37, 54, 65, 0.25),
-            transparent 38%
-        ),
-        var(--background);
+    background: var(--background);
 
     color: var(--text);
 
-    font-family:
-        "Segoe UI",
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family: var(--body-font);
 }
 
 a {
@@ -68,10 +62,10 @@ a {
 }
 
 .logo {
-    color: var(--copper-light);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 25px;
-    letter-spacing: 0.05em;
+    color: var(--text);
+    font-family: var(--technical-font);
+    font-size: 17px;
+    letter-spacing: 0.24em;
     text-decoration: none;
 }
 
@@ -86,7 +80,7 @@ nav a {
     padding: 14px 0;
 
     color: var(--muted);
-    font-size: 16px;
+    font-size: 13px;
     text-decoration: none;
 
     transition: color 0.2s ease;
@@ -174,20 +168,17 @@ h1 {
 
     color: var(--text);
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-family: var(--heading-font);
 
-    font-size: clamp(54px, 5vw, 82px);
-    font-weight: 400;
+    font-size: clamp(56px, 5.6vw, 88px);
+    font-weight: 500;
     line-height: 1.04;
     letter-spacing: -0.035em;
 }
 
 .heading-line {
     width: 48px;
-    height: 2px;
+    height: 1px;
     margin: 36px 0;
 
     background: var(--copper);
@@ -199,7 +190,7 @@ h1 {
 
     color: var(--muted);
 
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.7;
 }
 
@@ -266,7 +257,7 @@ h1 {
 
     min-height: 650px;
 
-    background-color: rgba(15, 24, 31, 0.6);
+    background-color: rgba(10, 25, 37, 0.28);
 
     background-image:
         linear-gradient(var(--grid) 1px, transparent 1px),
@@ -790,5 +781,249 @@ footer {
 
         align-items: flex-start;
         flex-direction: column;
+    }
+}
+
+/* ==================================================
+   REFINED HOME PAGE
+   Matches the Space Grotesk About-page direction
+   ================================================== */
+
+.home-page .site-header,
+.home-page main,
+.home-page footer {
+    width: min(1180px, calc(100% - 80px));
+}
+
+.home-page .site-header {
+    min-height: 92px;
+    border-bottom-color: rgba(182, 195, 201, 0.12);
+}
+
+.home-page nav {
+    gap: 34px;
+}
+
+.home-page .hero {
+    position: relative;
+    min-height: calc(100vh - 92px);
+    padding: 92px 0 112px;
+    grid-template-columns: 1.03fr 0.97fr;
+    gap: 105px;
+}
+
+.home-page .hero::before,
+.home-page .hero::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: rgba(182, 195, 201, 0.16);
+}
+
+.home-page .hero::before {
+    top: 42px;
+    left: 0;
+    width: 118px;
+}
+
+.home-page .hero::after {
+    right: 0;
+    bottom: 42px;
+    width: 54px;
+}
+
+.home-page .hero-content {
+    max-width: 700px;
+}
+
+.home-page .section-label {
+    margin-bottom: 32px;
+    gap: 16px;
+    color: var(--copper);
+    font-family: var(--technical-font);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.09em;
+}
+
+.home-page .section-label::before {
+    width: 14px;
+    background: var(--copper);
+}
+
+.home-page h1 {
+    max-width: 760px;
+    font-family: var(--heading-font);
+    font-size: clamp(56px, 5.5vw, 86px);
+    font-weight: 500;
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+}
+
+.home-page .heading-line {
+    width: 42px;
+    margin: 38px 0;
+    background: rgba(200, 108, 60, 0.85);
+}
+
+.home-page .introduction {
+    max-width: 610px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.home-page .hero-buttons {
+    margin-top: 46px;
+    gap: 42px;
+}
+
+.home-page .primary-button,
+.home-page .secondary-button {
+    min-width: 0;
+    min-height: auto;
+    padding: 12px 0;
+    gap: 34px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(182, 195, 201, 0.2);
+    color: var(--text);
+    font-family: var(--body-font);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.home-page .primary-button span:last-child,
+.home-page .secondary-button span:last-child {
+    color: var(--copper);
+    transition: transform 180ms ease;
+}
+
+.home-page .primary-button:hover,
+.home-page .secondary-button:hover {
+    background: transparent;
+    border-color: var(--copper);
+    color: var(--text);
+    transform: none;
+}
+
+.home-page .primary-button:hover span:last-child,
+.home-page .secondary-button:hover span:last-child {
+    transform: translateX(6px);
+}
+
+.home-page .diagram-container {
+    min-height: 610px;
+    background-color: rgba(10, 25, 37, 0.2);
+    background-size: 42px 42px;
+    border-color: rgba(182, 195, 201, 0.14);
+}
+
+.home-page .diagram-container::before,
+.home-page .diagram-container::after {
+    width: 22px;
+    height: 22px;
+}
+
+.home-page .diagram-container::before {
+    border-top-width: 1px;
+    border-left-width: 1px;
+}
+
+.home-page .diagram-container::after {
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+}
+
+.home-page .diagram-title,
+.home-page .diagram-footer,
+.home-page .diagram-text,
+.home-page .motor-text {
+    font-family: var(--technical-font);
+}
+
+.home-page .diagram-title,
+.home-page .diagram-footer {
+    color: rgba(182, 195, 201, 0.48);
+    border-color: rgba(182, 195, 201, 0.12);
+}
+
+.home-page .electrical-line,
+.home-page .electrical-symbol,
+.home-page .device {
+    stroke-width: 1.25;
+}
+
+.home-page .bus-line {
+    stroke-width: 2;
+}
+
+.home-page footer {
+    min-height: 110px;
+    border-top-color: rgba(182, 195, 201, 0.12);
+    color: rgba(182, 195, 201, 0.48);
+    font-family: var(--technical-font);
+}
+
+@media (max-width: 1100px) {
+    .home-page .hero {
+        grid-template-columns: 1fr;
+        gap: 90px;
+    }
+
+    .home-page .hero-content {
+        max-width: 850px;
+    }
+
+    .home-page .diagram-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 760px) {
+    .home-page .site-header,
+    .home-page main,
+    .home-page footer {
+        width: calc(100% - 36px);
+    }
+
+    .home-page .site-header {
+        padding: 24px 0;
+    }
+
+    .home-page .logo {
+        font-size: 15px;
+    }
+
+    .home-page nav {
+        margin-top: 20px;
+        gap: 16px;
+    }
+
+    .home-page .hero {
+        padding: 84px 0 90px;
+        gap: 70px;
+    }
+
+    .home-page .hero::before {
+        top: 38px;
+    }
+
+    .home-page h1 {
+        font-size: clamp(46px, 13vw, 64px);
+    }
+
+    .home-page .hero-buttons {
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .home-page .primary-button,
+    .home-page .secondary-button {
+        width: 100%;
+    }
+
+    .home-page .diagram-container {
+        min-height: auto;
     }
 }
