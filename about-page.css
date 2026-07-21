@@ -424,8 +424,7 @@ html {
 .project-copy a,
 .next-links a {
     color: var(--about-accent);
-
-    font-size: 13px;
+    font-size: 15px;
     text-decoration: none;
 }
 
@@ -487,10 +486,8 @@ html {
     min-height: 170px;
     margin: 0;
     padding: 0 25px;
-
     border-left: 1px solid var(--about-border);
-
-    font-size: 13px;
+    font-size: 17px;
 }
 
 .working-points p:first-child {
@@ -501,10 +498,8 @@ html {
 .working-points span {
     display: block;
     margin-bottom: 24px;
-
     color: var(--about-accent);
-
-    font-size: 10px;
+    font-size: 15px;
 }
 
 /* Bottom navigation */
