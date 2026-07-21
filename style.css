@@ -65,7 +65,7 @@ a {
     color: var(--text);
     font-family: var(--technical-font);
     font-size: 22px;
-    letter-spacing: 0.24em;
+    letter-spacing: 0.14em;
     text-decoration: none;
 }
 
