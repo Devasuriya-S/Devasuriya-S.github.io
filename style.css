@@ -1027,3 +1027,20 @@ footer {
         min-height: auto;
     }
 }
+
+/* Shared colours for every page */
+
+html,
+body {
+    background-color: #071521;
+}
+
+body {
+    background-image: none;
+}
+
+.logo,
+.home-page .logo,
+.about-page .logo {
+    color: #e8e5df;
+}
