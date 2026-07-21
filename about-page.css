@@ -64,8 +64,8 @@ html {
     color: var(--about-text);
 
     font-family: var(--technical-font);
-    font-size: 25px;
-    letter-spacing: 0.24em;
+    font-size: 22px;
+    letter-spacing: 0.14em;
 
     text-decoration: none;
 }
