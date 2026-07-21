@@ -43,8 +43,8 @@
 .experience-page .logo {
     color: var(--experience-text);
     font-family: var(--experience-technical-font);
-    font-size: 17px;
-    letter-spacing: 0.24em;
+    font-size: 22px;
+    letter-spacing: 0.14em;
     text-decoration: none;
 }
 
@@ -172,7 +172,7 @@
 .hero-summary {
     max-width: 650px;
     margin: 42px 0 0;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .experience-motif {
@@ -238,7 +238,7 @@
 }
 
 .role-meta {
-    font-size: 10px;
+    font-size: 14px;
     letter-spacing: 0.07em;
     text-transform: uppercase;
 }
@@ -283,7 +283,7 @@
 
 .role-details > p {
     margin: 0 0 30px;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .role-details ul {
@@ -297,7 +297,7 @@
     margin-top: 13px;
     padding-left: 22px;
     color: var(--experience-muted);
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.65;
 }
 
@@ -354,7 +354,7 @@
     margin: 0;
     padding: 28px 30px;
     border-top: 1px solid var(--experience-border-light);
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .developed-grid p:nth-child(odd) {
