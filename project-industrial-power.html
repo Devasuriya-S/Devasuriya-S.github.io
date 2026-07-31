@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Industrial Power Distribution Design | Devasuriya</title>
+
+    <meta
+        name="description"
+        content="A detailed overview of Devasuriya's personal industrial power distribution design learning project and its results."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="project-industrial-power.css?v=1">
+</head>
+
+<body class="power-case-page">
+
+    <header class="site-header">
+        <a class="logo" href="index.html">DEVASURIYA</a>
+
+        <button
+            class="case-menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="case-navigation"
+        >
+            Menu
+        </button>
+
+        <nav id="case-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a class="active" href="projects.html" aria-current="page">Projects</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="case-main">
+
+        <section class="case-hero">
+            <p class="case-label">Project 01 / Personal learning project</p>
+            <h1>Industrial Power<br>Distribution Design</h1>
+            <span class="title-line" aria-hidden="true"></span>
+        </section>
+
+        <section class="case-section description-section" aria-labelledby="description-title">
+            <div class="section-heading">
+                <span aria-hidden="true"></span>
+                <h2 id="description-title">Project Description</h2>
+            </div>
+
+            <div class="section-copy">
+                <p>
+                    This personal learning project focused on designing a robust and
+                    efficient industrial power distribution system for a medium-scale
+                    facility. The design process covered the complete flow from
+                    understanding the electrical demand and operational requirements
+                    to developing a reliable distribution network that supports
+                    safety, selectivity and maintainability.
+                </p>
+
+                <p>
+                    The work included preparing single-line diagrams and control
+                    schematics, assessing connected loads and diversity, and selecting
+                    suitable switchgear, protective devices, transformers, busbars and
+                    cables. Cable routing, voltage drop and protection coordination
+                    were considered as part of the design. ETAP was used to perform
+                    load-flow and short-circuit studies and to assess system behaviour
+                    under normal and fault conditions.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section results-section" aria-labelledby="results-title">
+            <div class="section-heading">
+                <span aria-hidden="true"></span>
+                <h2 id="results-title">Results</h2>
+            </div>
+
+            <div class="results-panel">
+                <article class="result-item">
+                    <span class="result-number">01</span>
+                    <div>
+                        <h3>Single-line diagram</h3>
+                        <p>
+                            Developed the complete single-line diagram for the main
+                            and sub-distribution sections of the system.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="result-item">
+                    <span class="result-number">02</span>
+                    <div>
+                        <h3>Control schematics</h3>
+                        <p>
+                            Prepared control schematics for key equipment, operating
+                            logic and protection interlocks.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="result-item">
+                    <span class="result-number">03</span>
+                    <div>
+                        <h3>Load-flow study</h3>
+                        <p>
+                            Performed an ETAP load-flow study to assess voltage
+                            profiles and system performance during normal operation.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="result-item">
+                    <span class="result-number">04</span>
+                    <div>
+                        <h3>Panel GA diagram</h3>
+                        <p>
+                            Created panel general arrangement drawings to define
+                            equipment layout and component placement.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="result-item">
+                    <span class="result-number">05</span>
+                    <div>
+                        <h3>Short-circuit study</h3>
+                        <p>
+                            Conducted short-circuit analysis in ETAP to check fault
+                            levels against equipment ratings.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="result-item">
+                    <span class="result-number">06</span>
+                    <div>
+                        <h3>Protection coordination</h3>
+                        <p>
+                            Performed protection coordination in ETAP to improve
+                            selectivity and verify protective-device operation.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="result-item result-item-wide">
+                    <span class="result-number">07</span>
+                    <div>
+                        <h3>Engineering understanding</h3>
+                        <p>
+                            Developed a stronger practical understanding of industrial
+                            distribution design, equipment selection, protection
+                            principles and power-system simulation.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="case-actions" aria-label="Next links">
+            <a href="projects.html"><span aria-hidden="true">←</span> Back to projects</a>
+            <a href="contact.html">Contact me <span aria-hidden="true">→</span></a>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>DEVASURIYA · ELECTRICAL ENGINEERING PORTFOLIO</span>
+        <span>PERTH, WESTERN AUSTRALIA · 2026</span>
+    </footer>
+
+    <script>
+        const menuButton = document.querySelector(".case-menu-button");
+        const navigation = document.querySelector("#case-navigation");
+
+        menuButton.addEventListener("click", () => {
+            const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+            menuButton.setAttribute("aria-expanded", String(!isOpen));
+            navigation.classList.toggle("open");
+        });
+    </script>
+
+</body>
+</html>
